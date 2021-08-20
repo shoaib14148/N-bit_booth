@@ -21,21 +21,9 @@ Current 2-bits	Multiplier of these	Previous MSB	Pending Increment	Total Multipli
 11	-1	1	+1	0
 
 Carry Save Adders
-Ripple carry adders are slow due to rippling of carry. CSA can be used for adding 4 bits the same column. A 4 input 2 output CSA is shown in the following figure. 
+Ripple carry adders are slow due to rippling of carry. CSA can be used for adding 4 bits the same column. . 
  
 The first full adder takes 3 bits of partial product of same weight. The sum output of first FA goes to next FA. The carry output ({cy}_1) goes as intermediate input to the CSA used in the column to the left of this. The second FA accept one more bit from partial product column. Even though {cy}_1 goes to the next CSA it does not ripple all the way horizontally, hence increase speed.
-The following figure shows addition of 4 columns of 4 bits each. Rows are labelled as a, b, c, and d. Columns are 0, 1, 2, and 3.
- 
-Outputs are collected in two separate registers shown in dotted lines known as sum and carry registers. The contents are added using conventional ripple carry adder. 
- Simulation and Results
-A VHDL code is written in Quartus and simulated in Modelsim. Following figure is taken from Modelsim window showing result of multiplication of two 8 bits numbers. 
- 
-
-
-Comparison with Array Multiplier using Timing Analysis
-Timing analysis for 8-bit Booth multiplier and 8-bit array multiplier is done in Quartus. The result for worst case timing path for both the multipliers is shown in following figures.
- 
-
   
 Conclusion  
 Design for Booth multiplication algorithm with Carry Save Adders is implemented in VHDL. Various test cases are given to check the proper functioning of implemented algorithm. The speed of operation of Booth multiplier is shown to be greater than array multiplier.
